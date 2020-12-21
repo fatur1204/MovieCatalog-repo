@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MovieCatalog</string>
+    <string name="movie">Movie</string>
+    <string name="tvshow">TV Show</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="dateline">Dateline</string>
+    <string name="description_film">Deskripsi Film</string>
+    <string name="title_activity_detail_movie">Detail Movie</string>
+    <string name="writer">Penulis</string>
+    <string name="nilaivote">Nilai Vote</string>
+    <string name="description_writer">description_writer</string>
+    <string name="share_text">Share Movie %s</string>
+    <string name="menu_favourite">Favorit</string>
+</resources>
