@@ -13,4 +13,6 @@
     <string name="description_writer">description_writer</string>
     <string name="share_text">Share Movie %s</string>
     <string name="menu_favourite">Favorit</string>
+
+    <string name="no_data_available">No Data Available!</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.fathur.moviecatalog.ui.tvshow;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -76,6 +77,13 @@ public class TVShowFragment extends Fragment implements TVShowFragmentCallback {
                             break;
                         case SUCCESS:
                             fragmentTVShowBinding.progressBar.setVisibility(View.GONE);
+                            if (tvshow.data.size() > 0) {
+                                Log.d(TAG, "not_empty_data");
+                                fragmentTVShowBinding.emptyView.setVisibility(View.GONE);
+                            } else {
+                                Log.d(TAG, "empty_data");
+                                fragmentTVShowBinding.emptyView.setVisibility(View.VISIBLE);
+                            }
                             adapter.submitList(tvshow.data);
                             adapter.notifyDataSetChanged();
                             break;

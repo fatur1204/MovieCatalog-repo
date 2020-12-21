@@ -1,6 +1,7 @@
 package com.fathur.moviecatalog.ui.movies;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,6 +68,13 @@ public class MovieFragment extends Fragment {
                             break;
                         case SUCCESS:
                             fragmentMovieBinding.progressBar.setVisibility(View.GONE);
+                            if (movies.data.size() > 0) {
+                                Log.d(TAG, "not_empty_data");
+                                fragmentMovieBinding.emptyView.setVisibility(View.GONE);
+                            } else {
+                                Log.d(TAG, "empty_data");
+                                fragmentMovieBinding.emptyView.setVisibility(View.VISIBLE);
+                            }
                             movieAdapter.submitList(movies.data);
                             movieAdapter.notifyDataSetChanged();
                             break;
