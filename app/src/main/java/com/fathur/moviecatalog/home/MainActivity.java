@@ -17,6 +17,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
     private static final String TAG = MainActivity.class.getSimpleName();
     private Bundle bundle = new Bundle();
+    private BottomNavigationView navigation;
+
 
     private boolean loadFragment(Fragment fragment) {
         Log.d(TAG, "frag_name : " + fragment);
@@ -38,17 +40,18 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().setTitle("Movie");
         bundle.putInt("message", 0);
         loadFragment(new MovieFragment());
 
-        BottomNavigationView navigation = findViewById(R.id.navigationView);
+        navigation = findViewById(R.id.navigationView);
         navigation.setOnNavigationItemSelectedListener(this);
 
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setElevation(0);
+            getSupportActionBar().setTitle("Movie");
         }
+
     }
 
     @Override
